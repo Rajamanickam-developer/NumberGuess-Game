@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --roboto: 'Roboto', sans-serif;
+  --oswald: 'Oswald', sans-serif;
+  --clr-russian-violet : #392b58;
+  --clr-ultra-violet: #645e9d;
+  --clr-white : #fff;
+  --border-radius: 5px;
+  --clr-platinum: #dfe0e2;
+  --clr-silver: #aaaaaa;
+  --clr-blue-cryola: #2176ff;
+}
+
+body{
+  font-family: var(--oswald);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, var(--clr-russian-violet), var(--clr-ultra-violet), var(--clr-silver));
+}
+
+.game-container{
+  margin: 10rem auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius);
+}
+
+.title{
+  text-align: center;
+  color: var(--clr-blue-cryola);
+}
+
+.input-number{
+  padding: 1rem;
+  width: 70px;
+  border: 2px solid var(--clr-blue-cryola);
+  border-radius: var(--border-radius);
+  font-size:30px;
+  color: var(--clr-russian-violet);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+.btn-guess{
+  padding: 0.5rem 2rem;
+  background-color: var(--clr-blue-cryola);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--clr-platinum);
+  font-weight: 800;
+}
+
+.btn-guess:hover{
+ background-color: red;
+ transition: 0.5s;
+}
+
+.btn-reset{
+  padding: 0.5rem 2rem;
+  background-color: red;
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--clr-platinum);
+  font-weight: 800;
+  display: none;
+}
+
+.btn-reset:hover{
+  background-color: var(--clr-blue-cryola);
+  transition: 0.5s;
+}
+
+.score-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 22px;
+  color: orangered;
+}
+
