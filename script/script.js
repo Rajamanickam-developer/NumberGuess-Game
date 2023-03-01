@@ -14,11 +14,12 @@ highScoreEl.innerText = highScore;
 guessesLeftEl.innerText = guessesLeft;
 
 //random number generating function
-const  randomNumber = function (maxRange) {
+const  randomNumber = function random(maxRange) {
   return Math.trunc((Math.random() * maxRange) + 1);
 };
-const randomValue = randomNumber(100);
+let randomValue = randomNumber(100);
 
+// console.log(randomValue);
 
 checkBtn.addEventListener('click', function () {
   const guessValue = Number(inputVal.value);
@@ -62,4 +63,6 @@ resetBtn.addEventListener('click', function(){
   inputVal.value = '';
   outputEl.textContent = '';
   resetBtn.style.display = 'none';
+  randomValue = randomNumber(100);
+  // console.log(randomValue);
 })
